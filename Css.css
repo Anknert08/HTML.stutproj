@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#grid {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+
+
+header {
+    grid-row: 1/2;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    border-bottom: 1px solid lightgray;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: auto auto auto  auto 1fr;
+    list-style-type: none;
+    border-collapse: collapse;
+    margin: 0;
+    padding-left: 60px;
+    
+}
+
+li {
+    height: 90px;
+    align-content: center;
+    min-width: 100px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+li>a {
+    padding-left: 13px;
+    padding-right: 13px;
+    font-size: 20px;
+    color:black;
+    text-decoration: none;
+}
+
+li>a:hover {
+    cursor: pointer;
+}
+
+
+.namelink {
+    font-size: 30px;
+    box-shadow: 0px 0px 0px 2px black;
+}
+
+.namelist {
+    margin-right: 100px;
+}
+
+
+.more {
+    position: relative;
+}
+
+
+.moredd {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid lightgray;
+    padding: 0;
+    top:100%;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto 1fr;
+    left: -30px;
+}
+
+.moredd li {
+    align-content: center;
+    padding-left: 43px;
+    padding-right: 43px;
+    height: 30px;
+    margin: 0;
+    text-align: start;
+}
+
+.moredd a {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+.moredd li:hover a {
+    color: blue;
+    cursor: pointer;
+}
+
+.more ul {
+    align-content: end;
+    min-width: stretch;
+}
+
+.more:hover {
+    box-shadow: inset 0 -5px 0 -1px black;
+}
+
+.more:hover .moredd {
+    display: block;
+    display: grid;
+}
+
+.arrow::before {
+    content: " ▼";
+}
+.more:hover .arrow::before {
+    content: " ▲";
+}
+
+nav {
+    grid-row: 2/3;
+}
+
